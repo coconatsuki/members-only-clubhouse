@@ -1,10 +1,6 @@
 <div class='members_list'>
-  <% @user.each do |user| %>
+  <%= will_paginate %>
   <ul>
-    <li id="members_name">
-      <%= user.name %>
-    </li>
+    <%= render @users %>
   </ul>
-  <% end %>
-
 </div>
