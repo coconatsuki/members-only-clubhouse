@@ -2,10 +2,13 @@
 <html>
   <%= render 'layouts/head' %>
   <body>
-    <div class="container-fluid main">
     <%= render 'layouts/header' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <div class="container-fluid main">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

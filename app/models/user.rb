@@ -1,8 +1,12 @@
 class User < ApplicationRecord
-
   attr_accessor :remember_token
-
+  before_save :downcase_email
   has_secure_password
+
+
+  def downcase_email
+    self.email = email.downcase
+  end
 
   #to generate a new random token
   def self.new_token

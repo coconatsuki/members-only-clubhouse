@@ -3,8 +3,22 @@
 
 /* header */
 
-a, #root, p.footer-text, h1 {
+a, #root, p.footer-text, h1, span {
   color: #D00;
+}
+
+#root:hover {
+  background-color: #D00;
+  color: #ccc;
+}
+
+#login_link, #signin_link, #logout_link, #members_link, #profile_link, {
+  margin-right: 20px;
+  line-height: 2em;
+  &:hover {
+    background-color: #D00;
+    color: #ccc;
+  }
 }
 
 body, .navigation, footer {
@@ -15,11 +29,43 @@ label, btn, a:hover, li:hover {
   color: #ccc;
 }
 
+/* Profile */
+
+#profile {
+  border-bottom: 1px solid #ccc;
+  margin-top: 200px;
+}
+
+#name {
+  margin-top: 50px;
+}
+
+#profile, #name {
+  text-align: center;
+  color: #ccc;
+}
+
+/* Members_list */
+
+.members_list {
+  margin-top: 100px;
+}
+
+#members_name {
+  color: #ccc;
+  font-size: 15px;
+  margin: 0 0 30px 30px;
+  list-style: none;
+}
+
+/* footer */
+
 .footer-text {
   color: white;
   font-size: 25px;
   line-height: 50%;
 }
+
 
 footer {
   height: 50px;
@@ -33,15 +79,11 @@ footer {
   width: 1500px;
 }
 
-#login_link, #signin_link {
-  margin-right: 20px;
-      line-height: 2em;
-      &:hover {
-        background-color: #D00;
-      }
-}
-
 /* forms */
+
+#signin_title {
+  text-align: center;
+}
 
 .form {
   margin-top: 100px;
@@ -60,8 +102,4 @@ input, textarea, select, .uneditable-input {
 
 #login_form:hover, #signin_form:hover {
   background-color: #D00;
-}
-
-input {
-  height: auto !important;
 }
