@@ -1,0 +1,67 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* header */
+
+a, #root, p.footer-text, h1 {
+  color: #D00;
+}
+
+body, .navigation, footer {
+  background-color: black;
+}
+
+label, btn, a:hover, li:hover {
+  color: #ccc;
+}
+
+.footer-text {
+  color: white;
+  font-size: 25px;
+  line-height: 50%;
+}
+
+footer {
+  height: 50px;
+}
+
+.footer-text {
+ text-align: center;
+}
+
+.secret_door {
+  width: 1500px;
+}
+
+#login_link, #signin_link {
+  margin-right: 20px;
+      line-height: 2em;
+      &:hover {
+        background-color: #D00;
+      }
+}
+
+/* forms */
+
+.form {
+  margin-top: 100px;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+
+#login_form, #signin_form {
+  margin-bottom: 20px;
+}
+
+#login_form:hover, #signin_form:hover {
+  background-color: #D00;
+}
+
+input {
+  height: auto !important;
+}
