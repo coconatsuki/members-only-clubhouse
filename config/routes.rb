@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'post/new'
+
+  get 'post/index'
+
   get 'users/new'
 
   get 'users/create'
@@ -11,4 +15,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :users
+  resources :posts, :only => [:index, :new, :create]
+
 end
