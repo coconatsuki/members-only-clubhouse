@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :posts
   attr_accessor :remember_token
   before_save :downcase_email
   has_secure_password
@@ -20,9 +21,11 @@ class User < ApplicationRecord
     BCrypt::Password.create(string, cost: cost)
   end
 
-  #return true if a token matches an attribute's digest from the data base
-  def authenticated?(digest_attribute, token)
-    BCrypt::Password.new(digest_attribute).is_password?(token)
+  # Returns true if the given token matches the digest.
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
   end
 
 
@@ -32,5 +35,9 @@ class User < ApplicationRecord
   def remember
     self.remember_token = User.new_token
     update_attribute(:remember_digest, User.digest(remember_token))
+  end
+
+  def forget
+    update_attribute(:remember_digest, nil)
   end
 end

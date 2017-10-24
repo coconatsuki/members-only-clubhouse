@@ -8,7 +8,7 @@
 
 
 User.create!(name:  "Amande",
-             email: "amande.natsu@",
+             email: "amande.natsu@gmail.com",
              password:              "riendutout",
              password_confirmation: "riendutout")
 
