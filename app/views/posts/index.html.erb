@@ -6,7 +6,7 @@
         <p class="btn btn-danger"><%= link_to "Create New Post", new_post_path, class:'newpostlink' %></p>
       <% end %>
       </div>
-      <% @posts.reverse_each do |post| %>
+      <% @posts.each do |post| %>
         <div id="each-post">
             <p id="title"><%= post.title %></p>
           <p id="body"><%= post.body %></p>
