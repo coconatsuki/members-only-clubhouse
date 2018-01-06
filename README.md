@@ -1,4 +1,4 @@
-# README
+# Members-only clubhouse
 
 This is an 'Odin Project exercise'.
 
@@ -12,3 +12,5 @@ using Session management, Cookies, Remember Token and helpful methods to manage 
 
 The trick then was to make sure that only signed in users can see the author of each post.
 If not signed in, they can only see the post contents.
+
+It was also my first time to try and play around with Bootstrap.
