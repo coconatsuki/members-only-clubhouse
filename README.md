@@ -2,6 +2,8 @@
 
 This is an 'Odin Project exercise'.
 
+To try it, this is the HEROKU link (it might take some time to lead) => https://members-only-club.herokuapp.com/
+
 Instructions can be found on this website :
 https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication?ref=lnav
 
